@@ -1,39 +1,40 @@
-FEForm Nedir ?
+ï»¿FEForm Nedir ?
 ===============
- FEForm, PHP ile internet uygulamaları geliştirirken en sıkıcı ve uzun işlerden olan form işlemlerini daha basit bir şekilde yönetmenizi sağlayan bir php kütüphanesidir. FEForm ile formlarınızı düz html yerine PHP'de sınıflar sayesinde oluşturmaktasınız. Bu şekilde kodlarınıza daha sonra girdiğinizde kolayca yönetebilir ve değişikliğinizi yapabilirsiniz (maintenance kolaylığı). Validator foksiyonları sayesinde formunuzdaki her hangi bir öğenin zorunlu olmasını ya da sizin belirlediğiniz kriterlere uygun olmasını sağlayabilirsiniz.
+ FEForm, PHP ile internet uygulamalarÄ± geliÅŸtirirken en sÄ±kÄ±cÄ± ve uzun iÅŸlerden olan form iÅŸlemlerini daha basit bir ÅŸekilde yÃ¶netmenizi saÄŸlayan bir php kÃ¼tÃ¼phanesidir. FEForm ile formlarÄ±nÄ±zÄ± dÃ¼z html yerine PHP'de sÄ±nÄ±flar sayesinde oluÅŸturmaktasÄ±nÄ±z. Bu ÅŸekilde kodlarÄ±nÄ±za daha sonra girdiÄŸinizde kolayca yÃ¶netebilir ve deÄŸiÅŸikliÄŸinizi yapabilirsiniz (maintenance kolaylÄ±ÄŸÄ±). Validator foksiyonlarÄ± sayesinde formunuzdaki her hangi bir Ã¶ÄŸenin zorunlu olmasÄ±nÄ± ya da sizin belirlediÄŸiniz kriterlere uygun olmasÄ±nÄ± saÄŸlayabilirsiniz.
 
-Özellikler
+Ã–zellikler
 ==========
-- Hazır widgetlar (EmailWidget, PasswordInput gibi)
-- Custom Widget (Özel widget hazırlayabilme)
+- HazÄ±r widgetlar (EmailWidget, PasswordInput gibi)
+- Custom Widget (Ã–zel widget hazÄ±rlayabilme)
 - Validators (email_validator, numeric_validator gibi)
-- Özel validator hazırlayabilme
-- XSS Koruması
-- String Filters (girilen verileri filtrelerden geçirmek)
+- Ã–zel validator hazÄ±rlayabilme
+- XSS KorumasÄ±
+- String Filters (girilen verileri filtrelerden geÃ§irmek)
 
-Ücretli midir ?
+Ãœcretli midir ?
 ===============
- FEForm ücretsiz ve açık kaynak kodlu bir kütüphanedir. Dilediğiniz gibi indirip değiştirebilirsiniz.
+ FEForm Ã¼cretsiz ve aÃ§Ä±k kaynak kodlu bir kÃ¼tÃ¼phanedir. DilediÄŸiniz gibi indirip deÄŸiÅŸtirebilirsiniz.
  
-Dökümantasyon
+DÃ¶kÃ¼mantasyon
 =============
 
-Başlangıç
+BaÅŸlangÄ±Ã§
 ---------
- FEForm'u kullanabilmek için dosyaları projenizin dizinine veya her hangi bir dizine çıkarıp feform.php dosyasını include etmeniz yeterlidir. include('feform.php'); şeklinde include edebilirsiniz.
+ FEForm'u kullanabilmek iÃ§in dosyalarÄ± projenizin dizinine veya her hangi bir dizine Ã§Ä±karÄ±p feform.php dosyasÄ±nÄ± include etmeniz yeterlidir. include('feform.php'); ÅŸeklinde include edebilirsiniz.
 
-Form oluşturmak
+Form oluÅŸturmak
 ----------------
- Formları oluştururken Form sınıfından yeni sınıflar türeterek çalışacağız. Form base class (temel sınıf), ürettiğiniz class'lar ise  delivered class'lar (türetilmiş sınıf) olacaktır. Örnek olarak;
+ FormlarÄ± oluÅŸtururken Form sÄ±nÄ±fÄ±ndan yeni sÄ±nÄ±flar tÃ¼reterek Ã§alÄ±ÅŸacaÄŸÄ±z. Form base class (temel sÄ±nÄ±f), Ã¼rettiÄŸiniz class'lar ise  delivered class'lar (tÃ¼retilmiÅŸ sÄ±nÄ±f) olacaktÄ±r. Ã–rnek olarak;
+ 
 	<?php
 		 class AramaFormu extends Form {
 			 
 		 }
 	?>
 	
-Form field'larını (alanları) tanımlamak
+Form field'larÄ±nÄ± (alanlarÄ±) tanÄ±mlamak
 ----------------------------------------
- Form field'larını türettiğimiz sınıfda fields adında array(diziler) yardımıyla belirtmekteyiz. Array'deki label alanın gözükecek ismi, widget alanın türünü, validators ise verinin geçerliliğini, zorunlu olmasını vb. belirmektedir.
+ Form field'larÄ±nÄ± tÃ¼rettiÄŸimiz sÄ±nÄ±fda fields adÄ±nda array(diziler) yardÄ±mÄ±yla belirtmekteyiz. Array'deki label alanÄ±n gÃ¶zÃ¼kecek ismi, widget alanÄ±n tÃ¼rÃ¼nÃ¼, validators ise verinin geÃ§erliliÄŸini, zorunlu olmasÄ±nÄ± vb. belirmektedir.
  
 	<?php
 	class AramaFormu extends Form {
@@ -45,8 +46,8 @@ Form field'larını (alanları) tanımlamak
 				 ),
 				 "siralama" => Array(
 					"widget" => "Radio",
-					"label" => "Sıralama",
-					"choices" => Array("baslik"=>"Başlık", "hit"=>"Hit", "tarih", "Tarih")
+					"label" => "SÄ±ralama",
+					"choices" => Array("baslik"=>"BaÅŸlÄ±k", "hit"=>"Hit", "tarih", "Tarih")
 				),
 
 			 );
@@ -55,27 +56,28 @@ Form field'larını (alanları) tanımlamak
 	?>
 
 
-Belli başlı widget'lar
+Belli baÅŸlÄ± widget'lar
 ----------------------
-- TextInput (düz metin girişi)
-- PasswordInput (şifre girişi)
-- MailInput (email adresi girişi)
-- TextArea (geniş metin girişi)
-- Select (açılabilir menü ile giriş)
-- SelectMultiple (açılabilir menü ile birden fazla giriş)
-- Radio (radyo butonları ile tek seçim)
-- CheckBox (çentiklerle çoklu seçim)
+- TextInput (dÃ¼z metin giriÅŸi)
+- PasswordInput (ÅŸifre giriÅŸi)
+- MailInput (email adresi giriÅŸi)
+- TextArea (geniÅŸ metin giriÅŸi)
+- Select (aÃ§Ä±labilir menÃ¼ ile giriÅŸ)
+- SelectMultiple (aÃ§Ä±labilir menÃ¼ ile birden fazla giriÅŸ)
+- Radio (radyo butonlarÄ± ile tek seÃ§im)
+- CheckBox (Ã§entiklerle Ã§oklu seÃ§im)
  
- şimdilik bu kadar...
+ ÅŸimdilik bu kadar...
  
-Formu render etmek (yazdırmak)
+Formu render etmek (yazdÄ±rmak)
 ------------------------------
- Formu bir bir dizi ile doldurabilmektesiniz. Örneğin $_POST ve $_GET size array döndürür. Bunu direk formu oluştururken girebilirsiniz. Formun constructor (yapıcı) method'unda field'lara doldurulmaktadır. Biz aşağıdaki örnekte GET metodundan aldığımız dizi ile formumuzu doldurduk.
+ Formu bir bir dizi ile doldurabilmektesiniz. Ã–rneÄŸin $_POST ve $_GET size array dÃ¶ndÃ¼rÃ¼r. Bunu direk formu oluÅŸtururken girebilirsiniz. Formun constructor (yapÄ±cÄ±) method'unda field'lara doldurulmaktadÄ±r. Biz aÅŸaÄŸÄ±daki Ã¶rnekte GET metodundan aldÄ±ÄŸÄ±mÄ±z dizi ile formumuzu doldurduk.
+	
 	<?php
 	if ($_GET) {
 		$form = new AramaFormu($_GET);
 		if ($form->is_valid()) {
-		  echo $form->cleaned_data["kelime"] . " araması yapılıyor.";
+		  echo $form->cleaned_data["kelime"] . " aramasÄ± yapÄ±lÄ±yor.";
 		}
 		  
 	}
@@ -89,11 +91,12 @@ Formu render etmek (yazdırmak)
 	 <input type="submit" value="Ara" />
 	</form>
  
- Örnekte gördüğümüz gibi formdan gelen verileri formun cleaned_data özelliği sayesinde alabilmekteyiz.
+ Ã–rnekte gÃ¶rdÃ¼ÄŸÃ¼mÃ¼z gibi formdan gelen verileri formun cleaned_data Ã¶zelliÄŸi sayesinde alabilmekteyiz.
  
-Özel validator yazmak
+Ã–zel validator yazmak
 ---------------------
-Özel validator yazmak oldukça basittir. Her bir validatör sadece bir foksiyondan ibarettir. Aşağıdaki örnek ile rahatlıkla anlaşılabilir.
+Ã–zel validator yazmak oldukÃ§a basittir. Her bir validatÃ¶r sadece bir foksiyondan ibarettir. AÅŸaÄŸÄ±daki Ã¶rnek ile rahatlÄ±kla anlaÅŸÄ±labilir.
+	
 	<?php
 	function required($data) {
 			 if (empty($data))
@@ -102,16 +105,17 @@ Formu render etmek (yazdırmak)
 		}
 	?>
 	
-Özel widget yazmak
+Ã–zel widget yazmak
 ------------------
- Özel widget yazmak için widgets.php üzerindeki Widget sınıfından başka bir sınıf türetmeniz gerekmektedir. Aşağıdaki örnekte widget sınıfından türetilmiş bir sınıf gözükmekte.
+ Ã–zel widget yazmak iÃ§in widgets.php Ã¼zerindeki Widget sÄ±nÄ±fÄ±ndan baÅŸka bir sÄ±nÄ±f tÃ¼retmeniz gerekmektedir. AÅŸaÄŸÄ±daki Ã¶rnekte widget sÄ±nÄ±fÄ±ndan tÃ¼retilmiÅŸ bir sÄ±nÄ±f gÃ¶zÃ¼kmekte.
+	
 	<?php
 	class EmailInput extends TextInput {
 		 var $validators = Array("email_validator");
 	}
 	?>
 
- Aşağıdaki kod parçasında ise türettiğiniz sınıflarda kullanabileceğiniz özelikleri gösterilmekte. name, value, label özellikleri form oluştururken kullanılmakta. type özelliğini widget'a özel olarak belirtebilirsiniz. örneğin password olarak belirtesiniz şifre seçim girişi elde edersiniz. choices özelliği çoklu seçimlerde kullanılmaktadır. attrs ile widget'a ait parametreleri belirtebilirsiniz. Örneğin textarea için rows, cols gibi. validators özelliği widget'ın default denetleyicisini belirtmekte. Örneğin EmailInput için email_validator validator'ü default olarak gelmekte. string filters özelliği formdan gelen verinin geçeceği filtreleri belirmekte. strip_tags formdaki html kodlarını temizler. trim ise girilen metinin başındaki ve sonundaki gereksiz boşlukları temizler. Bu iki filter default olarak gelmekte. Dilerseniz kendi filter fonksiyonunuzu yazıp, burada string olarak belirtebilirsiniz.
+ AÅŸaÄŸÄ±daki kod parÃ§asÄ±nda ise tÃ¼rettiÄŸiniz sÄ±nÄ±flarda kullanabileceÄŸiniz Ã¶zelikleri gÃ¶sterilmekte. name, value, label Ã¶zellikleri form oluÅŸtururken kullanÄ±lmakta. type Ã¶zelliÄŸini widget'a Ã¶zel olarak belirtebilirsiniz. Ã¶rneÄŸin password olarak belirtesiniz ÅŸifre seÃ§im giriÅŸi elde edersiniz. choices Ã¶zelliÄŸi Ã§oklu seÃ§imlerde kullanÄ±lmaktadÄ±r. attrs ile widget'a ait parametreleri belirtebilirsiniz. Ã–rneÄŸin textarea iÃ§in rows, cols gibi. validators Ã¶zelliÄŸi widget'Ä±n default denetleyicisini belirtmekte. Ã–rneÄŸin EmailInput iÃ§in email_validator validator'Ã¼ default olarak gelmekte. string filters Ã¶zelliÄŸi formdan gelen verinin geÃ§eceÄŸi filtreleri belirmekte. strip_tags formdaki html kodlarÄ±nÄ± temizler. trim ise girilen metinin baÅŸÄ±ndaki ve sonundaki gereksiz boÅŸluklarÄ± temizler. Bu iki filter default olarak gelmekte. Dilerseniz kendi filter fonksiyonunuzu yazÄ±p, burada string olarak belirtebilirsiniz.
  
 	var $name;
 	var $value;
@@ -126,5 +130,6 @@ Formu render etmek (yazdırmak)
 
 Demo
 =====
- Demolar, dökümantasyon ve daha detaylı bilgi için;
+ Demolar, dÃ¶kÃ¼mantasyon ve daha detaylÄ± bilgi iÃ§in;
+ 
  http://fatiherikli.com/fejax/
