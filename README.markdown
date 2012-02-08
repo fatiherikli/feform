@@ -132,4 +132,4 @@ Demo
 =====
  Demolar, dökümantasyon ve daha detaylı bilgi için;
  
- http://fatiherikli.com/fejax/
+ http://fatiherikli.com/feform/
